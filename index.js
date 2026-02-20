@@ -14,6 +14,7 @@ async function init(sourceUrl, startingOrigin, proxyTs) {
       "baseUrlHashReplay": true,
       "proxyOrigin": new URL(startingOrigin).origin,
       "altProxyOrigins": ["https://blogs.bl.uk"],
+      "proxyRewriteRelCanonical": true,
       "proxyTs": proxyTs,
       "proxyBannerUrl": "banner.js",
     },
