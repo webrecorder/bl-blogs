@@ -13,7 +13,7 @@ async function init(sourceUrl, startingOrigin, proxyTs) {
       "baseUrl": baseUrl.href,
       "baseUrlHashReplay": true,
       "proxyOrigin": new URL(startingOrigin).origin,
-      "altProxyOrigin": "https://blogs.bl.uk",
+      "altProxyOrigins": ["https://blogs.bl.uk"],
       "proxyTs": proxyTs,
       "proxyBannerUrl": "banner.js",
     },
