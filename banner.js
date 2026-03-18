@@ -42,7 +42,7 @@ function createBanner() {
   document.body.prepend(b);
   created = true;
 
-  setFavicon("https://www.bl.uk/favicon.ico");
+  setFavicon("https://www.bl.uk/britishlibrary/resources/global/images/favicon.ico");
 }
 
 function setFavicon(href) {
