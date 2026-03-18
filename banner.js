@@ -41,6 +41,23 @@ function createBanner() {
 
   document.body.prepend(b);
   created = true;
+
+  setFavicon("https://www.bl.uk/favicon.ico");
 }
+
+function setFavicon(href) {
+  let link = document.querySelector("link[rel~='icon']");
+
+  if (!link) {
+    // If no favicon link exists, create a new one
+    link = document.createElement('link');
+    link.rel = 'icon';
+    document.head.appendChild(link);
+  }
+
+  // Update the href attribute to the new favicon URL
+  link.href = href;
+}
+
 
 document.addEventListener("readystatechange", () => createBanner());
