@@ -34,7 +34,7 @@ async function init(sourceUrl, startingOrigin, proxyTs) {
   // allow loading from live web (outside the archive)
   params.set("allowProxyPaths", "https://www.google-analytics.com/analytics.js,https://www.googletagmanager.com/gtm.js?id=GTM-000000");
 
-  await navigator.serviceWorker.register("/sw.js" + params.toString(), {scope});
+  await navigator.serviceWorker.register("/sw.js?" + params.toString(), {scope});
 
   await new Promise((resolve) => {
     if (!navigator.serviceWorker.controller) {
