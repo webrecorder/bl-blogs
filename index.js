@@ -42,7 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   params.set("notFoundTemplateUrl", "./notFound.html");
   // allow loading from live web (outside the archive)
   params.set("allowProxyPaths", "https://www.google-analytics.com/,https://www.googletagmanager.com/");
-  // allow proxying without https://wabac.js/proxy/ prefix as a 'passthrough' above URLs
+  // allow proxying without https://wab.ac/proxy/ prefix as a 'passthrough' above URLs
   params.set("allowProxyPassthrough", "1");
 
   await navigator.serviceWorker.register("/sw.js?" + params.toString(), {scope});
