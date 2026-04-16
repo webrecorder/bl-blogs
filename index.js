@@ -17,7 +17,7 @@ async function init(sourceUrl, startingOrigin, proxyTs) {
       "proxyRewriteRelCanonical": true,
       "proxyTs": proxyTs,
       "proxyBannerUrl": "banner.js",
-      "proxyHomePageUrl": "./homepage.html",
+      "proxyHomePageUrl": "./index.html",
       "proxyCustomInsert": `
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
