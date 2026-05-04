@@ -18,14 +18,7 @@ async function init(sourceUrl, startingOrigin, proxyTs) {
       "proxyTs": proxyTs,
       "proxyBannerUrl": "banner.js",
       "proxyHomePageUrl": "./index.html",
-      "proxyCustomInsert": `
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5MZR27');</script>
-<!-- End Google Tag Manager -->`
+      "excludeUrlPaths": ["https://www.google-analytics.com/"],
     },
   };
 
@@ -41,7 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   params.set("proxyOriginMode", "1");
   params.set("notFoundTemplateUrl", "./notFound.html");
   // allow loading from live web (outside the archive)
-  params.set("allowProxyPaths", "https://www.google-analytics.com/,https://www.googletagmanager.com/");
+  //params.set("allowProxyPaths", "https://www.google-analytics.com/,https://www.googletagmanager.com/");
   // allow proxying without https://wab.ac/proxy/ prefix as a 'passthrough' above URLs
   params.set("allowProxyPassthrough", "1");
 
